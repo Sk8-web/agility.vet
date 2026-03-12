@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agility Vet - UTI Móvel</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f4f8f7; color: #333; line-height: 1.6; }
+        
+        header { background: #fff; padding: 40px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .logo img { height: 600px; width: auto; max-width: 95%; object-fit: contain; margin-bottom: 20px; }
+        
+        .contato-topo { color: #f26d21; font-size: 32px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .contato-topo span.big-emoji { font-size: 90px; line-height: 1; }
+
+        .hero { background: #267365; color: white; padding: 70px 20px; text-align: center; border-bottom: 8px solid #f26d21; }
+        .hero h1 { font-size: 50px; margin-bottom: 10px; }
+        .hero p { font-size: 24px; opacity: 0.9; }
+        
+        .btn { display: inline-flex; align-items: center; gap: 20px; background: #25D366; color: white; padding: 20px 50px; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 28px; margin-top: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.3s; }
+        .btn span.btn-icon { font-size: 60px; line-height: 1; }
+        
+        /* ANIMAÇÃO DO BOTÃO WHATSAPP */
+        .btn:hover { transform: scale(1.05); background-color: #128C7E; }
+
+        .container { padding: 60px 20px; max-width: 1200px; margin: auto; }
+        h2 { color: #267365; text-align: center; font-size: 38px; margin-bottom: 50px; text-transform: uppercase; }
+
+        /* CARDS DE SERVIÇOS COM ANIMAÇÃO VOLTADA */
+        .servicos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        
+        .card { 
+            background: white; 
+            padding: 35px; 
+            border-radius: 25px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08); 
+            display: flex; 
+            align-items: center; 
+            gap: 25px; 
+            border-top: 8px solid #f26d21; 
+            transition: all 0.4s ease; /* Tempo da animação */
+            cursor: default;
+        }
+        
+        /* O EFEITO DE HOVER QUE VOCÊ ADOROU */
+        .card:hover { 
+            transform: translateY(-15px); /* O balão sobe */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* A sombra aumenta */
+            border-top-color: #267365; /* Muda a cor da borda ao passar o mouse */
+        }
+        
+        .icon { font-size: 110px; min-width: 120px; text-align: center; line-height: 1; }
+        .card-text { flex: 1; }
+        .card b { color: #267365; font-size: 22px; display: block; margin-bottom: 8px; }
+        .card span { font-size: 18px; color: #555; }
+
+        .video-section { background: #fff; padding: 70px 20px; text-align: center; }
+        video { width: 100%; max-width: 950px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); border: 8px solid #fff; }
+
+        footer { background: #267365; color: white; text-align: center; padding: 60px 20px; margin-top: 60px; }
+        footer b { color: #f26d21; font-size: 28px; }
+
+        @media (max-width: 900px) {
+            .logo img { height: 250px; }
+            .icon { font-size: 80px; min-width: 90px; }
+            .contato-topo span.big-emoji { font-size: 60px; }
+            .card:hover { transform: translateY(-5px); } /* Menos movimento no celular */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="logo.JPG" alt="Logo Agility Vet"></div>
+    <div class="contato-topo">
+        <span class="big-emoji">🚑</span>
+        <div>EMERGÊNCIA 24H: (11) 92165-8656</div>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>Agility Vet</h1>
+    <p>Ambulância e UTI Móvel Veterinária de Alta Complexidade</p>
+    <a href="https://wa.me/5511921658656" class="btn">
+        <span class="btn-icon">📞</span>
+        CONVERSAR NO WHATSAPP
+    </a>
+</div>
+
+<div class="container">
+    <h2>Nossos Serviços Especializados</h2>
+    <div class="servicos-grid">
+        <div class="card">
+            <div class="icon">🚑</div>
+            <div class="card-text"><b>Ambulância Completa</b><span>Remoção Simples e UTI em veículos equipados.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">📊</div>
+            <div class="card-text"><b>Monitorização Avançada</b><span>Acompanhamento rigoroso de todos os sinais vitais.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">🧑‍⚕️</div>
+            <div class="card-text"><b>Equipe Especializada</b><span>Médico Veterinário Intensivista, Enfermeiro e Motorista.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">🏥</div>
+            <div class="card-text"><b>Equipamento de Ponta</b><span>Tecnologia avançada para suporte de vida.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">🌬️</div>
+            <div class="card-text"><b>Ventilação Mecânica</b><span>Suporte respiratório para casos críticos.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">🧪</div>
+            <div class="card-text"><b>Oxigenioterapia</b><span>Suporte de oxigênio contínuo durante o transporte.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">💊</div>
+            <div class="card-text"><b>Controle de Dor</b><span>Medicações para o conforto e bem-estar do paciente.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">💉</div>
+            <div class="card-text"><b>Drogas Vasoativas</b><span>Administração de fármacos de suporte hemodinâmico.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">❤️</div>
+            <div class="card-text"><b>Reanimação (RCP)</b><span>Equipe treinada para manobras de emergência.</span></div>
+        </div>
+        <div class="card">
+            <div class="icon">⚡</div>
+            <div class="card-text"><b>Desfibrilação</b><span>Suporte completo para emergências cardíacas.</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="video-section">
+    <h2>Conheça Nossa Estrutura</h2>
+    <video controls>
+        <source src="Video.MP4" type="video/mp4">
+    </video>
+</div>
+
+<footer>
+    <p><b>AGILITY VET - UTI MÓVEL</b>
