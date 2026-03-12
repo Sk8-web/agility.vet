@@ -18,9 +18,9 @@
         .hero h1 { font-size: 50px; margin-bottom: 10px; }
         .hero p { font-size: 24px; opacity: 0.9; }
         
-        .btn { display: inline-flex; align-items: center; gap: 20px; background: #25D366; color: white; padding: 20px 50px; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 28px; margin-top: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.3s; }
+        .btn { display: inline-flex; align-items: center; gap: 20px; background: #25D366; color: white; padding: 20px 50px; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 28px; margin-top: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.2s; }
         .btn span.btn-icon { font-size: 60px; line-height: 1; }
-        .btn:hover, .btn:active { transform: scale(1.05); background-color: #128C7E; }
+        .btn:active { transform: scale(0.95); background-color: #128C7E; }
 
         .container { padding: 60px 20px; max-width: 1200px; margin: auto; }
         h2 { color: #267365; text-align: center; font-size: 38px; margin-bottom: 50px; text-transform: uppercase; }
@@ -36,13 +36,16 @@
             align-items: center; 
             gap: 25px; 
             border-top: 8px solid #f26d21; 
-            transition: all 0.4s ease;
+            /* ANIMAÇÃO ACELERADA */
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
             cursor: pointer; 
             -webkit-tap-highlight-color: transparent; 
+            will-change: transform;
         }
         
-        .card:hover, .card:active { 
-            transform: translateY(-15px); 
+        /* EFEITO DE CLIQUE RÁPIDO NO CELULAR */
+        .card:active, .card:hover { 
+            transform: translateY(-12px) scale(1.02); 
             box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
             border-top-color: #267365; 
         }
@@ -65,7 +68,8 @@
             .logo img { height: 250px; }
             .icon { font-size: 80px; min-width: 90px; }
             .contato-topo span.big-emoji { font-size: 60px; }
-            .card:hover, .card:active { transform: translateY(-8px); }
+            /* AJUSTE PARA TOQUE NO CELULAR SER MAIS CURTO E RÁPIDO */
+            .card:active { transform: translateY(-5px) scale(1.01); }
         }
     </style>
 </head>
@@ -91,136 +95,50 @@
 <div class="container">
     <h2>Nossos Serviços Especializados</h2>
     <div class="servicos-grid">
+        <div class="card"><div class="icon">🚑</div><div class="card-text"><b>Ambulância Completa</b><span>Remoção Simples e UTI em veículos equipados.</span></div></div>
+        <div class="card"><div class="icon">📊</div><div class="card-text"><b>Monitorização Avançada</b><span>Acompanhamento rigoroso de todos os sinais vitais.</span></div></div>
+        <div class="card"><div class="icon">🧑‍⚕️</div><div class="card-text"><b>Equipe Especializada</b><span>Médico Veterinário Intensivista, Enfermeiro e Motorista.</span></div></div>
+        <div class="card"><div class="icon">🏥</div><div class="card-text"><b>Equipamento de Ponta</b><span>Tecnologia avançada para suporte de vida.</span></div></div>
+        <div class="card"><div class="icon">🌬️</div><div class="card-text"><b>Ventilação Mecânica</b><span>Suporte respiratório para casos críticos.</span></div></div>
+        <div class="card"><div class="icon">🧪</div><div class="card-text"><b>Oxigenioterapia</b><span>Suporte de oxigênio contínuo durante o transporte.</span></div></div>
+        <div class="card"><div class="icon">💊</div><div class="card-text"><b>Controle de Dor e Bem-Estar</b><span>Medicações para o conforto e bem-estar do paciente.</span></div></div>
+        <div class="card"><div class="icon">💉</div><div class="card-text"><b>Drogas Vasoativas</b><span>Administração de fármacos de suporte hemodinâmico.</span></div></div>
+        <div class="card"><div class="icon">❤️</div><div class="card-text"><b>Reanimação (RCP)</b><span>Equipe treinada para manobras de emergência.</span></div></div>
+        <div class="card"><div class="icon">⚡</div><div class="card-text"><b>Desfibrilação</b><span>Suporte completo para emergências cardíacas.</span></div></div>
         
-        <div class="card">
-            <div class="icon">🚑</div>
-            <div class="card-text"><b>Ambulância Completa</b><span>Remoção Simples e UTI em veículos equipados.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">📊</div>
-            <div class="card-text"><b>Monitorização Avançada</b><span>Acompanhamento rigoroso de todos os sinais vitais.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🧑‍⚕️</div>
-            <div class="card-text"><b>Equipe Especializada</b><span>Médico Veterinário Intensivista, Enfermeiro e Motorista.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🏥</div>
-            <div class="card-text"><b>Equipamento de Ponta</b><span>Tecnologia avançada para suporte de vida.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🌬️</div>
-            <div class="card-text"><b>Ventilação Mecânica</b><span>Suporte respiratório para casos críticos.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🧪</div>
-            <div class="card-text"><b>Oxigenioterapia</b><span>Suporte de oxigênio contínuo durante o transporte.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">💊</div>
-            <div class="card-text"><b>Controle de Dor e Bem-Estar</b><span>Medicações para o conforto e bem-estar do paciente.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">💉</div>
-            <div class="card-text"><b>Drogas Vasoativas</b><span>Administração de fármacos de suporte hemodinâmico.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">❤️</div>
-            <div class="card-text"><b>Reanimação (RCP)</b><span>Equipe treinada para manobras de emergência.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">⚡</div>
-            <div class="card-text"><b>Desfibrilação</b><span>Suporte completo para emergências cardíacas.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🐶</div>
-            <div class="card-text"><b>Leve e Traga para Exames</b><span>Pontualidade absoluta com espera inclusa para exames.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">😺</div>
-            <div class="card-text"><b>Remoção Low-Stress</b><span>Transporte especializado para pacientes acamados ou com dor.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🩺</div>
-            <div class="card-text"><b>Suporte de Emergência</b><span>Unidade de UTI móvel equipada para estabilização imediata.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🗺️</div>
-            <div class="card-text"><b>Rede de Transferências</b><span>Conectamos residências e hospitais em toda a Grande SP.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🩹</div>
-            <div class="card-text"><b>Suporte Pós-Operatório</b><span>Transporte assistido para animais em recuperação cirúrgica.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🧬</div>
-            <div class="card-text"><b>Home Care Assistido</b><span>Transporte para fisioterapia, hemodiálise ou quimioterapia.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🌍</div>
-            <div class="card-text"><b>Traslado Aeroportuário</b><span>Logística segura e climatizada para embarque e desembarque.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🏢</div>
-            <div class="card-text"><b>Check-in Hospitalar</b><span>Cuidamos de toda a burocracia de internação pelo tutor.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🩸</div>
-            <div class="card-text"><b>Logística de Emergência Sanguínea</b><span>Transporte ultrarrápido de bolsas de sangue veterinárias.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🦮</div>
-            <div class="card-text"><b>Pet Senior & Mobilidade</b><span>Transporte adaptado com rampas para cães idosos.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🕊️</div>
-            <div class="card-text"><b>Despedida Digna</b><span>Suporte sensível para transporte em casos de óbito.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🦠</div>
-            <div class="card-text"><b>Logística de Biópsias e Coletas</b><span>Retirada e entrega expressa de amostras biológicas.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🦾</div>
-            <div class="card-text"><b>Adaptação de Órteses e Cadeiras</b><span>Transporte especializado para centros de reabilitação.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🐩</div>
-            <div class="card-text"><b>Maternidade Pet</b><span>Transporte monitorado para fêmeas em trabalho de parto.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🌡️</div>
-            <div class="card-text"><b>Logística de Vacinação</b><span>Suporte para campanhas de imunização em massa.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🧠</div>
-            <div class="card-text"><b>Transporte Neuro-Reabilitação</b><span>Veículo com amortecimento para crises neurológicas.</span></div>
-        </div>
-        <div class="card">
-            <div class="icon">🐾</div>
-            <div class="card-text"><b>Leva e Traz Especializado</b><span>Banho & Tosa Clínico com suporte médico necessário.</span></div>
-        </div>
-        
+        <div class="card"><div class="icon">🐶</div><div class="card-text"><b>Leve e Traga para Exames</b><span>Pontualidade absoluta com espera inclusa para exames.</span></div></div>
+        <div class="card"><div class="icon">😺</div><div class="card-text"><b>Remoção Low-Stress</b><span>Transporte especializado para pacientes acamados ou com dor.</span></div></div>
+        <div class="card"><div class="icon">🩺</div><div class="card-text"><b>Suporte de Emergência</b><span>Unidade de UTI móvel equipada para estabilização imediata.</span></div></div>
+        <div class="card"><div class="icon">🗺️</div><div class="card-text"><b>Rede de Transferências</b><span>Conectamos residências e hospitais em toda a Grande SP.</span></div></div>
+        <div class="card"><div class="icon">🩹</div><div class="card-text"><b>Suporte Pós-Operatório</b><span>Transporte assistido para animais em recuperação cirúrgica.</span></div></div>
+        <div class="card"><div class="icon">🧬</div><div class="card-text"><b>Home Care Assistido</b><span>Transporte para fisioterapia, hemodiálise ou quimioterapia.</span></div></div>
+        <div class="card"><div class="icon">🌍</div><div class="card-text"><b>Traslado Aeroportuário</b><span>Logística segura e climatizada para embarque e desembarque.</span></div></div>
+        <div class="card"><div class="icon">🏢</div><div class="card-text"><b>Check-in Hospitalar</b><span>Cuidamos de toda a burocracia de internação pelo tutor.</span></div></div>
+        <div class="card"><div class="icon">🩸</div><div class="card-text"><b>Logística de Emergência Sanguínea</b><span>Transporte ultrarrápido de bolsas de sangue veterinárias.</span></div></div>
+        <div class="card"><div class="icon">🐾</div><div class="card-text"><b>Pet Senior & Mobilidade</b><span>Transporte adaptado com rampas para cães idosos.</span></div></div>
+        <div class="card"><div class="icon">🕊️</div><div class="card-text"><b>Despedida Digna</b><span>Suporte sensível para transporte em casos de óbito.</span></div></div>
+        <div class="card"><div class="icon">🦠</div><div class="card-text"><b>Logística de Biópsias e Coletas</b><span>Retirada e entrega expressa de amostras biológicas.</span></div></div>
+        <div class="card"><div class="icon">🦾</div><div class="card-text"><b>Adaptação de Órteses e Cadeiras</b><span>Transporte especializado para centros de reabilitação.</span></div></div>
+        <div class="card"><div class="icon">🐩</div><div class="card-text"><b>Maternidade Pet</b><span>Transporte monitorado para fêmeas em trabalho de parto.</span></div></div>
+        <div class="card"><div class="icon">🌡️</div><div class="card-text"><b>Logística de Vacinação</b><span>Suporte para campanhas de imunização em massa.</span></div></div>
+        <div class="card"><div class="icon">🧠</div><div class="card-text"><b>Transporte Neuro-Reabilitação</b><span>Veículo com amortecimento para crises neurológicas.</span></div></div>
+        <div class="card"><div class="icon">🛁</div><div class="card-text"><b>Leva e Traz Especializado</b><span>Banho & Tosa Clínico com suporte médico necessário.</span></div></div>
     </div>
 </div>
 
 <div class="video-section">
     <h2>Conheça Nossa Estrutura</h2>
-    <video controls>
-        <source src="Video.MP4" type="video/mp4">
-    </video>
+    <video controls><source src="Video.MP4" type="video/mp4"></video>
 </div>
 
 <footer>
     <div class="footer-brand">AGILITY VET - UTI MÓVEL</div>
-    
     <div class="footer-section">
         <h3>📍 Nossas Bases</h3>
         <p><span class="footer-icon">🏢</span> Rua Pindaibal, 83</p>
         <p><span class="footer-icon">🏢</span> Rua Alfredo Gioielli, 212</p>
         <p><span class="footer-icon">🏢</span> Rua Comandante Sampaio, 801</p>
     </div>
-    
     <div class="footer-section">
         <h3>📞 Contato 24 Horas</h3>
         <p><span class="footer-icon">📱</span> (11) 92165-8656</p>
