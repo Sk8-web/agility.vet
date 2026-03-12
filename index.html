@@ -20,7 +20,9 @@
         
         .btn { display: inline-flex; align-items: center; gap: 20px; background: #25D366; color: white; padding: 20px 50px; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 28px; margin-top: 35px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: 0.2s; }
         .btn span.btn-icon { font-size: 60px; line-height: 1; }
-        .btn:active { transform: scale(0.95); background-color: #128C7E; }
+        
+        /* BOTÃO WHATSAPP MAIS SUAVE */
+        .btn:active { transform: scale(0.98); background-color: #128C7E; }
 
         .container { padding: 60px 20px; max-width: 1200px; margin: auto; }
         h2 { color: #267365; text-align: center; font-size: 38px; margin-bottom: 50px; text-transform: uppercase; }
@@ -36,18 +38,23 @@
             align-items: center; 
             gap: 25px; 
             border-top: 8px solid #f26d21; 
-            /* ANIMAÇÃO ACELERADA */
-            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+            /* TRANSIÇÃO SUAVIZADA */
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
             cursor: pointer; 
             -webkit-tap-highlight-color: transparent; 
-            will-change: transform;
         }
         
-        /* EFEITO DE CLIQUE RÁPIDO NO CELULAR */
-        .card:active, .card:hover { 
-            transform: translateY(-12px) scale(1.02); 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+        /* SENSIBILIDADE REDUZIDA (0.5x) */
+        .card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12); 
             border-top-color: #267365; 
+        }
+
+        /* AJUSTE ESPECÍFICO PARA TOQUE NO CELULAR */
+        .card:active { 
+            transform: translateY(-4px) scale(0.99); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
         }
         
         .icon { font-size: 110px; min-width: 120px; text-align: center; line-height: 1; }
@@ -68,8 +75,6 @@
             .logo img { height: 250px; }
             .icon { font-size: 80px; min-width: 90px; }
             .contato-topo span.big-emoji { font-size: 60px; }
-            /* AJUSTE PARA TOQUE NO CELULAR SER MAIS CURTO E RÁPIDO */
-            .card:active { transform: translateY(-5px) scale(1.01); }
         }
     </style>
 </head>
@@ -105,7 +110,6 @@
         <div class="card"><div class="icon">💉</div><div class="card-text"><b>Drogas Vasoativas</b><span>Administração de fármacos de suporte hemodinâmico.</span></div></div>
         <div class="card"><div class="icon">❤️</div><div class="card-text"><b>Reanimação (RCP)</b><span>Equipe treinada para manobras de emergência.</span></div></div>
         <div class="card"><div class="icon">⚡</div><div class="card-text"><b>Desfibrilação</b><span>Suporte completo para emergências cardíacas.</span></div></div>
-        
         <div class="card"><div class="icon">🐶</div><div class="card-text"><b>Leve e Traga para Exames</b><span>Pontualidade absoluta com espera inclusa para exames.</span></div></div>
         <div class="card"><div class="icon">😺</div><div class="card-text"><b>Remoção Low-Stress</b><span>Transporte especializado para pacientes acamados ou com dor.</span></div></div>
         <div class="card"><div class="icon">🩺</div><div class="card-text"><b>Suporte de Emergência</b><span>Unidade de UTI móvel equipada para estabilização imediata.</span></div></div>
@@ -115,14 +119,14 @@
         <div class="card"><div class="icon">🌍</div><div class="card-text"><b>Traslado Aeroportuário</b><span>Logística segura e climatizada para embarque e desembarque.</span></div></div>
         <div class="card"><div class="icon">🏢</div><div class="card-text"><b>Check-in Hospitalar</b><span>Cuidamos de toda a burocracia de internação pelo tutor.</span></div></div>
         <div class="card"><div class="icon">🩸</div><div class="card-text"><b>Logística de Emergência Sanguínea</b><span>Transporte ultrarrápido de bolsas de sangue veterinárias.</span></div></div>
-        <div class="card"><div class="icon">🐾</div><div class="card-text"><b>Pet Senior & Mobilidade</b><span>Transporte adaptado com rampas para cães idosos.</span></div></div>
+        <div class="card"><div class="icon">🦮</div><div class="card-text"><b>Pet Senior & Mobilidade</b><span>Transporte adaptado com rampas para cães idosos.</span></div></div>
         <div class="card"><div class="icon">🕊️</div><div class="card-text"><b>Despedida Digna</b><span>Suporte sensível para transporte em casos de óbito.</span></div></div>
         <div class="card"><div class="icon">🦠</div><div class="card-text"><b>Logística de Biópsias e Coletas</b><span>Retirada e entrega expressa de amostras biológicas.</span></div></div>
         <div class="card"><div class="icon">🦾</div><div class="card-text"><b>Adaptação de Órteses e Cadeiras</b><span>Transporte especializado para centros de reabilitação.</span></div></div>
         <div class="card"><div class="icon">🐩</div><div class="card-text"><b>Maternidade Pet</b><span>Transporte monitorado para fêmeas em trabalho de parto.</span></div></div>
         <div class="card"><div class="icon">🌡️</div><div class="card-text"><b>Logística de Vacinação</b><span>Suporte para campanhas de imunização em massa.</span></div></div>
         <div class="card"><div class="icon">🧠</div><div class="card-text"><b>Transporte Neuro-Reabilitação</b><span>Veículo com amortecimento para crises neurológicas.</span></div></div>
-        <div class="card"><div class="icon">🛁</div><div class="card-text"><b>Leva e Traz Especializado</b><span>Banho & Tosa Clínico com suporte médico necessário.</span></div></div>
+        <div class="card"><div class="icon">🐾</div><div class="card-text"><b>Leva e Traz Especializado</b><span>Banho & Tosa Clínico com suporte médico necessário.</span></div></div>
     </div>
 </div>
 
