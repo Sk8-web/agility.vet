@@ -58,19 +58,21 @@
             .card:nth-child(3n) { animation-delay: 2s; }
         }
 
-        .icon { font-size: 110px; min-width: 120px; text-align: center; }
-        .card b { color: #267365; font-size: 22px; display: block; }
+        .icon { font-size: 110px; min-width: 120px; text-align: center; line-height: 1; }
+        .card-text { flex: 1; }
+        .card b { color: #267365; font-size: 22px; display: block; margin-bottom: 8px; }
+        .card span { font-size: 18px; color: #555; }
 
         .video-section { background: #fff; padding: 70px 20px 20px 20px; text-align: center; }
         video { width: 100%; max-width: 950px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); border: 8px solid #fff; }
 
         .sirene-wrapper { width: 100%; display: flex; justify-content: center; margin-bottom: -20px; position: relative; z-index: 10; }
-        .sirene-gif { width: 220px; height: auto; }
+        .sirene-gif { width: 220px; height: auto; display: block; }
 
         footer { 
             background: #267365; 
             color: white; 
-            padding: 60px 20px 40px 20px; 
+            padding: 60px 20px 30px 20px; 
             display: flex; 
             flex-direction: column; 
             align-items: center; 
@@ -78,14 +80,13 @@
             gap: 20px; 
         }
 
-        .footer-brand { color: #f26d21; font-size: 32px; font-weight: bold; }
-        .footer-section h3 { color: #f26d21; font-size: 28px; margin-bottom: 10px; text-transform: uppercase; }
-        .footer-section p { font-size: 20px; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .footer-brand { color: #f26d21; font-size: 32px; font-weight: bold; margin-bottom: 10px; }
+        .footer-section h3 { color: #f26d21; font-size: 28px; margin-bottom: 15px; text-transform: uppercase; }
+        .footer-section p { font-size: 20px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
-        /* AJUSTE DO GIF FINAL NO BRANCO SEM ESPAÇO EXCESSIVO */
         .gif-final-container {
             background: #fff; 
-            padding: 30px 20px;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -93,10 +94,12 @@
         .gif-final-container img {
             max-width: 350px;
             height: auto;
+            border-radius: 20px;
         }
 
         @media (max-width: 900px) {
             .logo img { height: 250px; }
+            .icon { font-size: 80px; min-width: 90px; }
             .contato-topo span.big-emoji { font-size: 60px; }
             .gif-final-container img { max-width: 250px; }
         }
@@ -128,8 +131,29 @@
         <div class="card"><div class="icon">📊</div><div class="card-text"><b>Monitorização Avançada</b><span>Acompanhamento rigoroso de todos os sinais vitais.</span></div></div>
         <div class="card"><div class="icon">🧑‍⚕️</div><div class="card-text"><b>Equipe Especializada</b><span>Médico Veterinário Intensivista, Enfermeiro e Motorista.</span></div></div>
         <div class="card"><div class="icon">🏥</div><div class="card-text"><b>Equipamento de Ponta</b><span>Tecnologia avançada para suporte de vida.</span></div></div>
+        <div class="card"><div class="icon">🌬️</div><div class="card-text"><b>Ventilação Mecânica</b><span>Suporte respiratório para casos críticos.</span></div></div>
+        <div class="card"><div class="icon">🧪</div><div class="card-text"><b>Oxigenioterapia</b><span>Suporte de oxigênio contínuo durante o transporte.</span></div></div>
+        <div class="card"><div class="icon">💊</div><div class="card-text"><b>Controle de Dor e Bem-Estar</b><span>Medicações para o conforto e bem-estar do paciente.</span></div></div>
+        <div class="card"><div class="icon">💉</div><div class="card-text"><b>Drogas Vasoativas</b><span>Administração de fármacos de suporte hemodinâmico.</span></div></div>
         <div class="card"><div class="icon">❤️</div><div class="card-text"><b>Reanimação (RCP)</b><span>Equipe treinada para manobras de emergência.</span></div></div>
+        <div class="card"><div class="icon">⚡</div><div class="card-text"><b>Desfibrilação</b><span>Suporte completo para emergências cardíacas.</span></div></div>
         <div class="card"><div class="icon">🐶</div><div class="card-text"><b>Leve e Traga para Exames</b><span>Pontualidade absoluta com espera inclusa para exames.</span></div></div>
+        <div class="card"><div class="icon">😺</div><div class="card-text"><b>Remoção Low-Stress</b><span>Transporte especializado para pacientes acamados ou com dor.</span></div></div>
+        <div class="card"><div class="icon">🩺</div><div class="card-text"><b>Suporte de Emergência</b><span>Unidade de UTI móvel equipada para estabilização imediata.</span></div></div>
+        <div class="card"><div class="icon">🗺️</div><div class="card-text"><b>Rede de Transferências</b><span>Conectamos residências e hospitais em toda a Grande SP.</span></div></div>
+        <div class="card"><div class="icon">🩹</div><div class="card-text"><b>Suporte Pós-Operatório</b><span>Transporte assistido para animais em recuperação cirúrgica.</span></div></div>
+        <div class="card"><div class="icon">🧬</div><div class="card-text"><b>Home Care Assistido</b><span>Transporte para fisioterapia, hemodiálise ou quimioterapia.</span></div></div>
+        <div class="card"><div class="icon">🌍</div><div class="card-text"><b>Traslado Aeroportuário</b><span>Logística segura e climatizada para embarque e desembarque.</span></div></div>
+        <div class="card"><div class="icon">🏢</div><div class="card-text"><b>Check-in Hospitalar</b><span>Cuidamos de toda a burocracia de internação pelo tutor.</span></div></div>
+        <div class="card"><div class="icon">🩸</div><div class="card-text"><b>Logística de Emergência Sanguínea</b><span>Transporte ultrarrápido de bolsas de sangue veterinárias.</span></div></div>
+        <div class="card"><div class="icon">🦮</div><div class="card-text"><b>Pet Senior & Mobilidade</b><span>Transporte adaptado com rampas para cães idosos.</span></div></div>
+        <div class="card"><div class="icon">🕊️</div><div class="card-text"><b>Despedida Digna</b><span>Suporte sensível para transporte em casos de óbito.</span></div></div>
+        <div class="card"><div class="icon">🦠</div><div class="card-text"><b>Logística de Biópsias e Coletas</b><span>Retirada e entrega expressa de amostras biológicas.</span></div></div>
+        <div class="card"><div class="icon">🦾</div><div class="card-text"><b>Adaptação de Órteses e Cadeiras</b><span>Transporte especializado para centros de reabilitação.</span></div></div>
+        <div class="card"><div class="icon">🐩</div><div class="card-text"><b>Maternidade Pet</b><span>Transporte monitorado para fêmeas em trabalho de parto.</span></div></div>
+        <div class="card"><div class="icon">🌡️</div><div class="card-text"><b>Logística de Vacinação</b><span>Suporte para campanhas de imunização em massa.</span></div></div>
+        <div class="card"><div class="icon">🧠</div><div class="card-text"><b>Transporte Neuro-Reabilitação</b><span>Veículo com amortecimento para crises neurológicas.</span></div></div>
+        <div class="card"><div class="icon">🐾</div><div class="card-text"><b>Leva e Traz Especializado</b><span>Banho & Tosa Clínico com suporte médico necessário.</span></div></div>
     </div>
 </div>
 
@@ -148,7 +172,7 @@
         <h3>📍 Nossas Bases</h3>
         <p>Rua Pindaibal, 83</p>
         <p>Rua Alfredo Gioielli, 212</p>
-        <p>Rua Comandante Sampaio, 801</p>
+        <p>Avenida Comandante Sampaio, 801</p>
     </div>
     <div class="footer-section">
         <h3>📞 Contato 24 Horas</h3>
